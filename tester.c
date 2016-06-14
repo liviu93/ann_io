@@ -20,7 +20,7 @@ void * get_mmap_reg(int * neurons)
     int size = sizeof(*neurons);
     memcpy(neurons, shm_ptr, size);
 
-    double * data = shm_ptr;
+    double * data = shm_ptr + size;
 
     return data;
 }
